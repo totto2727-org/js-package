@@ -6,9 +6,9 @@
   "scripts": {
     "test": "jest --verbose ./tests"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/gladevise/remark-link-card.git"
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
   },
   "engines": {
     "node": ">=12"

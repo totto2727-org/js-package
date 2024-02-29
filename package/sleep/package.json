@@ -6,9 +6,16 @@
   "bugs": {
     "url": "https://github.com/totto2727-org/js-package/issues"
   },
-  "keywords": ["typescript", "sleep"],
+  "keywords": [
+    "typescript",
+    "sleep"
+  ],
   "license": "MIT",
-  "version": "0.1.0",
+  "version": "0.1.1",
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
   "scripts": {
     "build": "run-z build:transpile,build:esm,build:cjs",
     "build:transpile": "bun build/build.mts",
