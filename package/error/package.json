@@ -1,0 +1,49 @@
+{
+  "name": "@totto2727/error",
+  "author": "totto2727 <kaihatu.totto2727@gmail.com>",
+  "description": "error util",
+  "homepage": "https://github.com/totto2727-org/js-package/tree/main/package/error",
+  "bugs": {
+    "url": "https://github.com/totto2727-org/js-package/issues"
+  },
+  "keywords": ["typescript", "error", "fetch"],
+  "license": "MIT",
+  "version": "0.1.0",
+  "scripts": {
+    "build": "run-z build:transpile,build:esm,build:cjs",
+    "build:transpile": "bun build/build.mts",
+    "build:esm": "tsc --project build/tsconfig.build.esm.json",
+    "build:cjs": "tsc --project build/tsconfig.build.cjs.json",
+    "prepublish": "attw --pack . || exit 0"
+  },
+  "files": [
+    "src",
+    "dist",
+    "package.json",
+    "../../tsconfig.json",
+    "../../LICENSE"
+  ],
+  "sideEffects": false,
+  "exports": {
+    "./http": {
+      "import": {
+        "types": "./dist/import/http/index.d.mts",
+        "default": "./dist/import/http/index.mjs"
+      },
+      "require": {
+        "types": "./dist/require/http/index.d.cts",
+        "default": "./dist/require/http/index.cjs"
+      }
+    },
+    "./layer": {
+      "import": {
+        "types": "./dist/import/layer/index.d.mts",
+        "default": "./dist/import/layer/index.mjs"
+      },
+      "require": {
+        "types": "./dist/require/layer/index.d.cts",
+        "default": "./dist/require/layer/index.cjs"
+      }
+    }
+  }
+}

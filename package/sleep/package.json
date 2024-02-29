@@ -1,0 +1,38 @@
+{
+  "name": "@totto2727/sleep",
+  "author": "totto2727 <kaihatu.totto2727@gmail.com>",
+  "description": "sleep util function",
+  "homepage": "https://github.com/totto2727-org/js-package/tree/main/package/sleep",
+  "bugs": {
+    "url": "https://github.com/totto2727-org/js-package/issues"
+  },
+  "keywords": ["typescript", "sleep"],
+  "license": "MIT",
+  "version": "0.1.0",
+  "scripts": {
+    "build": "run-z build:transpile,build:esm,build:cjs",
+    "build:transpile": "bun build/build.mts",
+    "build:esm": "tsc --project build/tsconfig.build.esm.json",
+    "build:cjs": "tsc --project build/tsconfig.build.cjs.json",
+    "prepublish": "attw --pack . || exit 0"
+  },
+  "files": [
+    "src",
+    "dist",
+    "package.json",
+    "../../tsconfig.json",
+    "../../LICENSE"
+  ],
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./dist/import/index.d.mts",
+        "default": "./dist/import/index.mjs"
+      },
+      "require": {
+        "types": "./dist/require/index.d.cts",
+        "default": "./dist/require/index.cjs"
+      }
+    }
+  }
+}
