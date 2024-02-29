@@ -1,0 +1,11 @@
+{
+  "recommendations": [
+    "editorconfig.editorconfig",
+    "unifiedjs.vscode-mdx",
+    "davidanson.vscode-markdownlint",
+    "takumii.markdowntable",
+    "biomejs.biome",
+    "redhat.vscode-yaml",
+    "esbenp.prettier-vscode"
+  ]
+}

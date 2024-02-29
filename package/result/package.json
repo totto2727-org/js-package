@@ -1,0 +1,65 @@
+{
+  "name": "@totto2727/result",
+  "author": "totto2727 <kaihatu.totto2727@gmail.com>",
+  "description": "Rust-inspired Result-type package",
+  "homepage": "https://github.com/totto2727-org/js-package/tree/main/package/result",
+  "bugs": {
+    "url": "https://github.com/totto2727-org/js-package/issues"
+  },
+  "keywords": [
+    "result",
+    "utils",
+    "fp",
+    "functional",
+    "programming",
+    "typescript"
+  ],
+  "license": "MIT",
+  "version": "0.6.8",
+  "scripts": {
+    "build": "run-z build:transpile,build:esm,build:cjs",
+    "build:transpile": "bun build/build.mts",
+    "build:esm": "tsc --project build/tsconfig.build.esm.json",
+    "build:cjs": "tsc --project build/tsconfig.build.cjs.json",
+    "prepublish": "attw --pack . || exit 0"
+  },
+  "files": [
+    "src",
+    "dist",
+    "package.json",
+    "../../tsconfig.json",
+    "../../LICENSE"
+  ],
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./dist/import/index.d.mts",
+        "default": "./dist/import/index.mjs"
+      },
+      "require": {
+        "types": "./dist/require/index.d.cts",
+        "default": "./dist/require/index.cjs"
+      }
+    },
+    "./eager": {
+      "import": {
+        "types": "./dist/import/eager.d.mts",
+        "default": "./dist/import/eager.mjs"
+      },
+      "require": {
+        "types": "./dist/require/eager.d.cts",
+        "default": "./dist/require/eager.cjs"
+      }
+    },
+    "./lazy": {
+      "import": {
+        "types": "./dist/import/lazy.d.mts",
+        "default": "./dist/import/lazy.mjs"
+      },
+      "require": {
+        "types": "./dist/require/lazy.d.cts",
+        "default": "./dist/require/lazy.cjs"
+      }
+    }
+  }
+}
