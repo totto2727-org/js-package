@@ -1,0 +1,29 @@
+{
+  "name": "@totto/lib",
+  "version": "0.1.0",
+  "lock": false,
+  "exports": {
+    "./error": "./error/index.ts",
+    "./remark-link-card": "./remark-link-card/index.ts",
+    "./result": "./result/index.ts",
+    "./safe": "./safe/index.ts",
+    "./sleep": "./sleep/index.ts",
+    "./test": "./test/index.ts"
+  },
+  "tasks": {
+    "test": "deno test --allow-read",
+    "fix": "deno task fix:deno:fmt",
+    "fix:deno:fmt": "deno fmt",
+    "check": "deno task check:deno:lint && deno task check:deno:fmt && deno task check:deno:check",
+    "check:deno:lint": "deno lint",
+    "check:deno:fmt": "deno fmt --check",
+    "check:deno:check": "deno check **/*.ts",
+    "changelog": "git cliff -o CHANGELOG.md"
+  },
+  "fmt": {
+    "semiColons": false
+  },
+  "imports": {
+    "@/": "./"
+  }
+}

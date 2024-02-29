@@ -1,0 +1,29 @@
+name: Check
+
+on:
+  workflow_dispatch:
+  pull_request:
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  static-analytics:
+    runs-on: ubuntu-22.04
+    timeout-minutes: 10
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: setup js
+        uses: ./.github/actions/setup-js
+
+      - name: Check
+        run: deno task check
+      
+      - name: Test
+        run: deno task test
+
+      - name: dry-run
+        run: deno publish --dry-run

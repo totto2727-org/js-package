@@ -1,0 +1,25 @@
+{
+  "extends": [
+    "config:recommended",
+    "schedule:weekends",
+    "schedule:automergeWeekends",
+    ":prConcurrentLimit20",
+    ":prHourlyLimitNone",
+    ":timezone(Asia/Tokyo)"
+  ],
+  "labels": ["renovate"],
+  "commitMessagePrefix": "build(deps): ",
+  "ignorePaths": ["./package/remark-link-card/**"],
+  "packageRules": [
+    {
+      "description": "Automerge non-major updates",
+      "matchUpdateTypes": ["patch", "minor"],
+      "automerge": true
+    },
+    {
+      "groupName": "runtime",
+      "matchPackagePatterns": ["bun"],
+      "automerge": false
+    }
+  ]
+}
