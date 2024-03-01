@@ -27,8 +27,7 @@
     "src",
     "dist",
     "package.json",
-    "../../tsconfig.json",
-    "../../LICENSE"
+    "LICENSE"
   ],
   "exports": {
     ".": {
