@@ -6,7 +6,7 @@ console.log("sleep1")
 const sleep2 = sleep(10000)
 console.log("sleep2")
 
-const sleep3 = await sleep(3000).promise
+await sleep(3000).promise
 console.log("sleep3")
 
 sleep2.forceResolve()
