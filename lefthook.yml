@@ -1,0 +1,11 @@
+pre-commit:
+  parallel: true
+  commands:
+    static-check:
+      run: bun run fix
+
+pre-push:
+  parallel: true
+  commands:
+    unit-test:
+      run: bun run-z check,test
