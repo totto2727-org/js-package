@@ -1,6 +1,9 @@
 {
   "$schema": "https://unpkg.com/@changesets/config@2.3.1/schema.json",
-  "changelog": ["@changesets/changelog-github", { "repo": "totto2727-org/js-package" }],
+  "changelog": [
+    "@changesets/changelog-github",
+    { "repo": "totto2727-org/js-package" }
+  ],
   "commit": false,
   "fixed": [],
   "linked": [],
