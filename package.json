@@ -19,11 +19,10 @@
     "@changesets/cli": "^2.27.1",
     "bun-types": "^1.0.29",
     "esbuild": "^0.20.1",
+    "lefthook": "^1.6.4",
+    "prettier": "^3.2.5",
     "run-z": "^2.0.0",
     "turbo": "^1.12.4",
     "typescript": "^5.0.0"
-  },
-  "dependencies": {
-    "prettier": "^3.2.5"
   }
 }
