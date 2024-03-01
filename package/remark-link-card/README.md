@@ -1,4 +1,8 @@
-# remark-link-card
+# @totto2727/remark-link-card
+
+This is a fork of [gladevise/remark-link-card](https://github.com/gladevise/remark-link-card).
+We have not been able to take over the history due to the monorepo project.
+Thanks to @gladevise!
 
 [Remark](https://github.com/remarkjs/remark) plugin to convert text links to link cards inspired by [gatsby-remark-link-card](https://github.com/JaeYeopHan/gatsby-remark-link-card)
 
