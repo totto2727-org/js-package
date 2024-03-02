@@ -9,6 +9,7 @@
   ],
   "labels": ["renovate"],
   "commitMessagePrefix": "build(deps): ",
+  "ignorePaths": ["./package/remark-link-card"],
   "packageRules": [
     {
       "description": "Automerge non-major updates",
