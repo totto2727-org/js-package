@@ -1,17 +1,19 @@
 {
   "name": "js-package",
   "version": "0.1.0",
-  "workspaces": ["package/*"],
   "scripts": {
+    "root:fix": "run-z root:fix:biome",
+    "root:fix:biome": "biome check --apply-unsafe .",
+    "root:check": "run-z root:check:biome",
+    "root:check:biome": "biome check .",
     "build": "turbo build",
-    "check": "run-z check:biome",
-    "check:biome": "biome check .",
-    "fix": "run-z fix:biome",
-    "fix:biome": "biome check --apply-unsafe .",
-    "test": "bun test",
+    "check": "turbo check",
+    "fix": "turbo fix",
+    "test": "turbo test",
     "prepublish": "turbo prepublish"
   },
   "type": "module",
+  "workspaces": ["package/*"],
   "devDependencies": {
     "@arethetypeswrong/cli": "^0.15.0",
     "@biomejs/biome": "^1.5.3",

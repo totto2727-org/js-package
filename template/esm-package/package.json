@@ -14,16 +14,15 @@
     "build:transpile": "bun build.mts",
     "build:esm": "tsc --project tsconfig.build.esm.json",
     "build:cjs": "tsc --project tsconfig.build.cjs.json",
-    "precommit": "run-z check:type fix test build",
+    "check": "run-z check:biome,check:tsc",
+    "check:biome": "biome check .",
+    "check:tsc": "tsc --noEmit",
+    "fix": "run-z fix:biome",
+    "fix:biome": "biome check --apply-unsafe .",
+    "test": "bun test",
     "prepublish": "attw --pack ."
   },
-  "files": [
-    "src",
-    "dist",
-    "package.json",
-    "../../tsconfig.json",
-    "../../LICENSE"
-  ],
+  "files": ["src", "dist", "package.json", "tsconfig.json", "LICENSE"],
   "exports": {
     ".": {
       "import": {

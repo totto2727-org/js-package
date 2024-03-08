@@ -4,7 +4,6 @@
   "description": "Remark plugin to convert text links to link cards inspired by gatsby-remark-link-card",
   "main": "index.js",
   "scripts": {
-    "test": "jest --verbose ./tests"
   },
   "publishConfig": {
     "access": "public",
