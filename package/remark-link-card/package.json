@@ -16,7 +16,6 @@
     "access": "public",
     "registry": "https://registry.npmjs.org/"
   },
-  "files": ["src", "dist", "package.json", "LICENSE"],
   "exports": {
     ".": {
       "import": {
@@ -29,28 +28,34 @@
       }
     }
   },
+  "files": ["src", "dist", "package.json", "tsconfig.json", "LICENSE"],
   "scripts": {
     "build": "run-z build:transpile,build:esm,build:cjs",
     "build:transpile": "bun build/build.mts",
     "build:esm": "tsc --project build/tsconfig.build.esm.json",
     "build:cjs": "tsc --project build/tsconfig.build.cjs.json",
+    "check": "run-z check:biome,check:tsc",
+    "check:biome": "biome check .",
+    "check:tsc": "tsc --noEmit",
+    "fix": "run-z fix:biome",
+    "fix:biome": "biome check --apply-unsafe .",
+    "test": "bun test",
     "prepublish": "attw --pack . || exit 0"
   },
   "dependencies": {
+    "@totto2727/result": "workspace:*",
     "he": "^1.2.0",
-    "open-graph-scraper": "git@github.com:totto2727-org/openGraphScraper.git",
+    "open-graph-scraper": "^6.5.0",
+    "remark": "^15.0.1",
     "remeda": "^1.46.0",
-    "sanitize-filename": "^1.6.3",
-    "unist-util-visit": "^2.0.3"
+    "unified": "^11.0.0",
+    "unist-util-visit": "^2.0.3",
+    "url-regex-safe": "^4.0.0"
   },
   "devDependencies": {
-    "@remark-embedder/core": "^1.2.4",
+    "@remark-embedder/core": "^3.0.2",
     "@types/he": "^1.2.3",
-    "next-mdx-remote": "^2.1.4",
-    "node-html-parser": "^3.1.4",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2",
-    "remark": "^13.0.0",
-    "remark-html": "^13.0.1"
+    "@types/url-regex-safe": "^1.0.2",
+    "remark-html": "^16.0.1"
   }
 }
