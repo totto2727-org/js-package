@@ -6,9 +6,12 @@
   "bugs": {
     "url": "https://github.com/totto2727-org/js-package/issues"
   },
-  "keywords": ["typescript", "sleep"],
+  "keywords": [
+    "typescript",
+    "sleep"
+  ],
   "license": "MIT",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "publishConfig": {
     "access": "public",
     "registry": "https://registry.npmjs.org/"
@@ -26,7 +29,13 @@
     "test": "bun test",
     "prepublish": "attw --pack . || exit 0"
   },
-  "files": ["src", "dist", "package.json", "tsconfig.json", "LICENSE"],
+  "files": [
+    "src",
+    "dist",
+    "package.json",
+    "tsconfig.json",
+    "LICENSE"
+  ],
   "exports": {
     ".": {
       "import": {
