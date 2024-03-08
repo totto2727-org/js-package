@@ -2,10 +2,14 @@ pre-commit:
   parallel: true
   commands:
     static-check:
-      run: bun run fix
+      run: bun run check
 
 pre-push:
   parallel: true
   commands:
+    root:
+      run: bun root:check
     unit-test:
-      run: bun run-z check,test
+      run: bun test
+    check:
+      run: bun check
