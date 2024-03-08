@@ -23,4 +23,4 @@ jobs:
         uses: ./.github/actions/setup-js
 
       - name: Static Check
-        run: na run-z check,test,build
+        run: na run-z build root:check,check,test
