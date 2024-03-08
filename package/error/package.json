@@ -6,11 +6,7 @@
   "bugs": {
     "url": "https://github.com/totto2727-org/js-package/issues"
   },
-  "keywords": [
-    "typescript",
-    "error",
-    "fetch"
-  ],
+  "keywords": ["typescript", "error", "fetch"],
   "license": "MIT",
   "version": "0.1.1",
   "publishConfig": {
@@ -22,14 +18,16 @@
     "build:transpile": "bun build/build.mts",
     "build:esm": "tsc --project build/tsconfig.build.esm.json",
     "build:cjs": "tsc --project build/tsconfig.build.cjs.json",
+    "check": "run-z check:biome,check:tsc",
+    "check:biome": "biome check .",
+    "check:tsc": "tsc --noEmit",
+    "fix": "run-z fix:biome",
+    "fix:biome": "biome check --apply-unsafe .",
+    "test": "bun test",
     "prepublish": "attw --pack . || exit 0"
   },
-  "files": [
-    "src",
-    "dist",
-    "package.json",
-    "LICENSE"
-  ],
+  "files": ["src", "dist", "package.json", "tsconfig.json", "LICENSE"],
+
   "sideEffects": false,
   "exports": {
     "./http": {

@@ -2,7 +2,7 @@
   "compilerOptions": {
     "types": ["bun-types"],
 
-    "lib": ["esnext"],
+    "lib": ["esnext", "DOM", "DOM.Iterable"],
     "module": "esnext",
     "target": "esnext",
     "moduleResolution": "bundler",

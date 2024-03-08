@@ -4,6 +4,7 @@
     "check": {},
     "fix": {},
     "build": {},
+    "test": {},
     "prepublish": {}
   }
 }
