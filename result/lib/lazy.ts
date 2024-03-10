@@ -21,14 +21,18 @@ export function serialize<
   }
 }
 
-export function unwrapOr<T, U, V>(fallbackValue: V) {
+export function unwrapOr<T, U, V>(
+  fallbackValue: V,
+): (result: InternalResult<T, U>) => T | V {
   return (result: InternalResult<T, U>) => {
     if (isFailure(result)) return fallbackValue
     return result.value
   }
 }
 
-export function unwrapOrElse<T, U, V>(fallbackFn: (error: U) => V) {
+export function unwrapOrElse<T, U, V>(
+  fallbackFn: (error: U) => V,
+): (result: InternalResult<T, U>) => T | V {
   return (result: InternalResult<T, U>) => {
     if (isFailure(result)) return fallbackFn(result.cause)
     return result.value
