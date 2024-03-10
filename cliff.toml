@@ -8,6 +8,7 @@
 [changelog]
 # changelog header
 header = """
+<!-- markdownlint-disable -->
 # Changelog\n
 All notable changes to this project will be documented in this file.\n
 """
