@@ -34,6 +34,8 @@ TODO: テンプレートを作成する
 ### PRを出す際の注意
 
 - lefthookの通らない状態で無理やりコミット、プッシュしないでください
+- [Conventional Commits](https://www.conventionalcommits.org/ja/v1.0.0/#%e6%a6%82%e8%a6%81)に従ってコミットしてください
+  - 特に破壊的変更は`!`もしくは`BREAKING CHANGE:`を忘れず記入してください
 
 ### 検証
 
