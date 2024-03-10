@@ -1,4 +1,4 @@
-# js-package
+# @totto/lib
 
 This repository is a monorepository project of packages created or forked by
 @totto2727.
