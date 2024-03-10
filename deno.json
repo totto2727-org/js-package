@@ -18,6 +18,8 @@
     "check:deno:lint": "deno lint",
     "check:deno:fmt": "deno fmt --check",
     "check:deno:check": "deno check **/*.ts",
+    "update:check": "deno run --allow-env --allow-read --allow-write=. --allow-run=git,deno --allow-net=registry.npmjs.org,jsr.io https://deno.land/x/molt/cli.ts ./**/*.ts",
+    "update:write": "deno task update:check --write",
     "changelog": "git cliff -o CHANGELOG.md"
   },
   "fmt": {
