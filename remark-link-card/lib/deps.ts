@@ -6,7 +6,7 @@ export {
   isNonNull,
   isString,
   merge,
-} from "npm:remeda@1.47.0"
+} from "npm:remeda@1.47.1"
 
 export type { Plugin } from "npm:unified@11.0.4"
 export type { Parent } from "npm:@types/mdast@4.0.3"
