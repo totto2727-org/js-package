@@ -16,6 +16,8 @@ Older versions of the NPM package are
 
 ```ts
 import * as result from "jsr:@totto/lib/result"
+import * as rE from "jsr:@totto/lib/result/eager"
+import * as rL from "jsr:@totto/lib/result/lazy"
 ```
 
 ## Usage
