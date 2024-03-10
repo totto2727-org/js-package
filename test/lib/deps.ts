@@ -1,0 +1,5 @@
+export * from "jsr:@std/testing@0.219.1/mock"
+export * from "jsr:@std/testing@0.219.1/bdd"
+export { it as test } from "jsr:@std/testing@0.219.1/bdd"
+export * from "jsr:@std/expect@0.219.1"
+export * from "jsr:@std/assert@0.219.1"

@@ -1,17 +1,27 @@
 pre-commit:
   parallel: true
   commands:
-    root:
-      run: bun root:check
+    fmt:
+      glob: "*.{ts,tsx,md,json,jsonc}"
+      run: deno fmt {staged_files}
+    lint:
+      glob: "*.{ts,tsx}"
+      run: deno lint {staged_files}
     check:
-      run: bun run check
+      glob: "*.{ts,tsx}"
+      run: deno check {staged_files}
 
 pre-push:
   parallel: true
   commands:
-    root:
-      run: bun root:check
-    unit-test:
-      run: bun test
+    fmt:
+      glob: "*.{ts,tsx,md,json,jsonc}"
+      run: deno fmt --check {push_files}
+    lint:
+      glob: "*.{ts,tsx}"
+      run: deno lint {push_files}
     check:
-      run: bun check
+      glob: "*.{ts,tsx}"
+      run: deno check {push_files}
+    unit-test:
+      run: deno task test
