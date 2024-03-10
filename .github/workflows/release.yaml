@@ -1,0 +1,29 @@
+name: Release packages
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  publish:
+    name: Release
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      contents: read
+      id-token: write # The OIDC ID token is used for authentication with JSR.
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup JavaScript
+        uses: ./.github/actions/setup-js
+
+      - name: Publish
+        run: deno publish
