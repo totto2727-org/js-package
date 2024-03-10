@@ -6,6 +6,8 @@
     "./error": "./error/index.ts",
     "./remark-link-card": "./remark-link-card/index.ts",
     "./result": "./result/index.ts",
+    "./result/lazy": "./result/lazy.ts",
+    "./result/eager": "./result/eager.ts",
     "./safe": "./safe/index.ts",
     "./sleep": "./sleep/index.ts",
     "./test": "./test/index.ts"
