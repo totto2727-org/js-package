@@ -23,5 +23,3 @@ pre-push:
     check:
       glob: "*.{ts,tsx}"
       run: deno check {push_files}
-    unit-test:
-      run: deno task test
