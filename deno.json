@@ -25,7 +25,8 @@
     "changelog": "git cliff -o CHANGELOG.md"
   },
   "fmt": {
-    "semiColons": false
+    "semiColons": false,
+    "exclude": ["CHANGELOG.md"]
   },
   "imports": {
     "@/": "./"
