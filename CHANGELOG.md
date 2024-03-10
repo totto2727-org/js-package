@@ -2,7 +2,20 @@
 
 All notable changes to this project will be documented in this file.
 
-## [0.1.0] - 2024-03-9
+## [0.1.1] - 2024-03-10
+
+### 📚 Documentation
+
+- Correct package name in CHANGELOG.md
+- Add README.md for each package doc
+
+### ⚙️ Miscellaneous Tasks
+
+- Add dependencies update task
+- _(deps)_ Update dependancies
+- _(release)_ Update v0.1.1
+
+## [0.1.0] - 2024-03-10
 
 ### ⚙️ Miscellaneous Tasks
 
