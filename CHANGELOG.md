@@ -3,11 +3,24 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.2.0] - 2024-03-23
+
+### 🚀 Features
+
+- Reproduce network errors with stubFetch
+
+### ⚙️ Miscellaneous Tasks
+
+- Exclude CHANGELOG.md in deno.json
+- Remove auto test in prepush
+- Match the title of the root README.md to the package name
+
 ## [0.1.2] - 2024-03-10
 
 ### 🐛 Bug Fixes
 
 - Missing exports of result/lazy and result/eager
+- Add type for slow type in lazy.ts
 
 ### 📚 Documentation
 
@@ -18,6 +31,7 @@ All notable changes to this project will be documented in this file.
 ### ⚙️ Miscellaneous Tasks
 
 - Add markdown-disable in changelog
+- *(release)* Update v0.1.2
 
 ## [0.1.1] - 2024-03-10
 
