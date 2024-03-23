@@ -23,7 +23,9 @@ export function fetchStub(
     globalThis,
     "fetch",
     () => {
-      if (response instanceof Error) throw new TypeError(response.message)
+      if (response instanceof Error) {
+        return Promise.reject(new TypeError(response.message))
+      }
       return Promise.resolve(response)
     },
   )
