@@ -13,7 +13,7 @@ export function abortSignalStub(): Stub<
 }
 
 export function fetchStub(
-  response: Response,
+  response: Response | Error,
 ): Stub<
   typeof globalThis,
   Parameters<typeof fetch>,
@@ -22,6 +22,9 @@ export function fetchStub(
   return stub(
     globalThis,
     "fetch",
-    () => Promise.resolve(response),
+    () => {
+      if (response instanceof Error) throw new TypeError(response.message)
+      return Promise.resolve(response)
+    },
   )
 }
