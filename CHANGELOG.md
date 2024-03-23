@@ -3,6 +3,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.2.1] - 2024-03-23
+
+### 🐛 Bug Fixes
+
+- Change to reject instead of throw
+
 ## [0.2.0] - 2024-03-23
 
 ### 🚀 Features
@@ -14,6 +20,7 @@ All notable changes to this project will be documented in this file.
 - Exclude CHANGELOG.md in deno.json
 - Remove auto test in prepush
 - Match the title of the root README.md to the package name
+- V0.2.0
 
 ## [0.1.2] - 2024-03-10
 
